@@ -4,7 +4,7 @@ using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
 
-namespace AfterKillSharp.Misc
+namespace AMastery.Misc
 {
     class CommonVariables
     {

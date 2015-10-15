@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using LeagueSharp;
 using LeagueSharp.Common;
 
-using AfterKillSharp.Misc;
+using AMastery.Misc;
 
-namespace AfterKillSharp
+namespace AMastery
 {
     class CAMastery
     {
@@ -37,7 +37,7 @@ namespace AfterKillSharp
 
         static bool CheckKillStates()
         {
-            if (killedStats[0] < ObjectManager.Player.ChampionsKilled)
+            if (killedStats[0] < ObjectManager.Player.ChampionsKilled && CommonVariables.Menu.Item("Kill").GetValue<bool>())
             {
                 killedStats[0] = ObjectManager.Player.ChampionsKilled;
                 return true;

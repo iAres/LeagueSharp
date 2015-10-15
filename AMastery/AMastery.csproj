@@ -37,7 +37,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>AfterKillSharp</RootNamespace>
+    <RootNamespace>AMastery</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LeagueSharp">

@@ -1,10 +1,10 @@
 ﻿using LeagueSharp.Common;
 
-using AfterKillSharp;
-using AfterKillSharp.Misc;
-using AfterKillSharp.Misc.Bootstrap;
+using AMastery;
+using AMastery.Misc;
+using AMastery.Misc.Bootstrap;
 
-namespace AfterKillSharp.Misc
+namespace AMastery.Misc
 {
     class CBootstrap
     {

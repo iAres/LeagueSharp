@@ -1,9 +1,9 @@
 ﻿using System;
 using LeagueSharp;
 using LeagueSharp.Common;
-using AfterKillSharp.Misc;
+using AMastery.Misc;
 
-namespace AfterKillSharp
+namespace AMastery
 {
     class Program
     {
