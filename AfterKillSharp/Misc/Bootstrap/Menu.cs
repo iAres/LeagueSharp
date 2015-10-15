@@ -8,9 +8,11 @@ namespace AfterKillSharp.Misc.Bootstrap
     {
         public static void Initalize()
         {
-            Menu rootMenu = CommonVariables.Menu;
-            rootMenu = new Menu("AfterKillSharp", "ares.aks", true);
-            rootMenu.AddItem(new MenuItem("OnOff", "Is Enabled?")).SetValue<Boolean>(true);
+            CommonVariables.Menu = new Menu("AMastery", "ares.aks", true);
+            CommonVariables.Menu.AddItem(new MenuItem("OnOff", "Is Enabled?")).SetValue<bool>(true);
+            CommonVariables.Menu.AddItem(new MenuItem("Ward", "Trigger when killing a ward?")).SetValue<bool>(false);
+            CommonVariables.Menu.AddItem(new MenuItem("Assist", "Trigger when getting an assist?")).SetValue<bool>(false);
+            CommonVariables.Menu.AddToMainMenu();
         }
     }
 }

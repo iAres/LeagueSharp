@@ -13,6 +13,7 @@ namespace AfterKillSharp
         }
         static void Game_OnGameLoad(EventArgs eventArgs)
         {
+            CBootstrap.Bootstrap();
             Game.PrintChat("<b>AfterKill</b> loaded. Written by Ares.");
         }
     }
