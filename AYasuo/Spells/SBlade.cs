@@ -8,7 +8,7 @@ using AYasuo.Spells;
 
 namespace AYasuo.Spells
 {
-    class SBlade
+    class SBlade 
     {
         private static Spell E
         {
@@ -16,12 +16,14 @@ namespace AYasuo.Spells
         }
         public static void Initialize()
         {
-            E.SetTargetted(E.Instance.SData.SpellCastTime, float.MaxValue);
+            //E.SetTargetted(E.Instance.SData.SpellCastTime, float.MaxValue);
+            Variables.Spells[SpellSlot.E].SetTargetted(E.Instance.SData.SpellCastTime, float.MaxValue);
+
         }
 
-        public static bool CastE(Vector3 Position, Obj_AI_Base Target)
+        public static bool CastE(Obj_AI_Base Target)
         {
-            if(!E.IsReady() || !E.IsInRange(Target) || Utility.V3E(ObjectManager.Player.ServerPosition, Target.ServerPosition, E.Range).UnderTurret(true))
+            if(!E.IsReady() || Target.HasBuff("YasuoDashWrapper") || !E.IsInRange(Target) || Utility.V3E(ObjectManager.Player.ServerPosition, Target.ServerPosition, E.Range).UnderTurret(true))
             {
                 return false;
             }

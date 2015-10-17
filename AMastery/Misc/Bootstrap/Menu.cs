@@ -10,7 +10,7 @@ namespace AMastery.Misc.Bootstrap
         {
             CommonVariables.Menu = new Menu("AMastery", "ares.aks", true);
             CommonVariables.Menu.AddItem(new MenuItem("OnOff", "Enable?")).SetValue<bool>(true);
-            CommonVariables.Menu.AddItem(new MenuItem("Enemy", "Trigger when killing an enemy?")).SetValue<bool>(true);
+            CommonVariables.Menu.AddItem(new MenuItem("Kill", "Trigger when killing an enemy?")).SetValue<bool>(true);
             CommonVariables.Menu.AddItem(new MenuItem("Ward", "Trigger when killing a ward?")).SetValue<bool>(false);
             CommonVariables.Menu.AddItem(new MenuItem("Assist", "Trigger when getting an assist?")).SetValue<bool>(false);
             CommonVariables.Menu.AddToMainMenu();

@@ -19,13 +19,14 @@ namespace AYasuo.Spells
         }
         public static void Initialize()
         {
-            GetQ[0].SetSkillshot(Utility.GetQDelay, 20.0f, float.MaxValue, false, SkillshotType.SkillshotLine);
-            GetQ[1].SetSkillshot(Utility.GetQDelay, 20.0f, float.MaxValue, false, SkillshotType.SkillshotLine);
-            GetQ[2].SetSkillshot(Utility.GetQ3Delay, 90.0f, float.MaxValue, false, SkillshotType.SkillshotCircle);
+            Variables.Q[0].SetSkillshot(Utility.GetQDelay, 20.0f, float.MaxValue, false, SkillshotType.SkillshotLine);
+            Variables.Q[1].SetSkillshot(Utility.GetQDelay, 20.0f, float.MaxValue, false, SkillshotType.SkillshotLine);
+            Variables.Q[2].SetSkillshot(Utility.GetQ3Delay, 90.0f, float.MaxValue, false, SkillshotType.SkillshotLine);
+
+            
         }
-        public static bool CastQ(Vector3 Position, Obj_AI_Base Target)
+        public static bool CastQ(Obj_AI_Base Target)
         {
-            Console.WriteLine("tried to execute q.");
             if (ObjectManager.Player.IsDashing() || !Variables.Q[Utility.GetQState()].IsReady())
             {
                 return false;
